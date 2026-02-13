@@ -441,6 +441,12 @@ p {
   color: var(--color-white);
 }
 
+.nav__link.nav__cta:hover {
+  background: var(--color-blue-dark);
+  border-color: var(--color-blue-dark);
+  color: var(--color-white);
+}
+
 /* Mobile Menu Toggle */
 .nav__toggle {
   display: none;
@@ -539,6 +545,11 @@ p {
   filter: drop-shadow(0 0 36px rgba(255, 255, 255, 1))
           drop-shadow(0 0 72px rgba(255, 255, 255, 1))
           drop-shadow(0 0 120px rgba(255, 255, 255, 0.5));
+  transition: transform var(--transition-base);
+}
+
+.hero__logo-wrap:hover .hero__logo {
+  transform: scale(1.05);
 }
 
 .hero__label {
@@ -966,11 +977,21 @@ a.exec-card {
   margin-bottom: var(--space-3);
 }
 
+.exec-card__info {
+  flex: 1;
+}
+
 .exec-card__bio {
   font-size: var(--text-sm);
   color: var(--color-gray-600);
   line-height: 1.6;
-  flex: 1;
+  margin-bottom: var(--space-1);
+}
+
+.exec-card__class {
+  font-size: var(--text-sm);
+  color: var(--color-gray-600);
+  line-height: 1.6;
 }
 
 /* --- Event Filter Tabs --- */
