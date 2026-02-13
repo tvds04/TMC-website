@@ -184,7 +184,72 @@ document.addEventListener('DOMContentLoaded', function() {
   initGallery('pastEventGallery');
 
   // ============================================
-  // 5. EVENT FILTERING
+  // 5. PAST VS UPCOMING EVENTS (date-based)
+  // ============================================
+  function getTodayYYYYMMDD() {
+    var d = new Date();
+    var y = d.getFullYear();
+    var m = String(d.getMonth() + 1).padStart(2, '0');
+    var day = String(d.getDate()).padStart(2, '0');
+    return String(y) + m + day;
+  }
+
+  function formatEventDateForDisplay(yyyymmdd) {
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    var y = yyyymmdd.substr(0, 4);
+    var m = parseInt(yyyymmdd.substr(4, 2), 10) - 1;
+    var d = parseInt(yyyymmdd.substr(6, 2), 10);
+    return months[m] + ' ' + d + ', ' + y;
+  }
+
+  // Events page: move past events from upcoming to past events grid
+  var eventsList = document.getElementById('eventsList');
+  var pastEventsGrid = document.getElementById('pastEventsGrid');
+  if (eventsList && pastEventsGrid) {
+    var cards = eventsList.querySelectorAll('.event-card');
+    var today = getTodayYYYYMMDD();
+    var placeholderImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E";
+
+    cards.forEach(function(card) {
+      var btn = card.querySelector('.add-to-cal');
+      var dateStr = btn ? btn.getAttribute('data-event-date') : null;
+      if (!dateStr || dateStr.length !== 8) return;
+
+      if (dateStr < today) {
+        var titleEl = card.querySelector('.event-card__title');
+        var title = titleEl ? titleEl.textContent.trim() : 'Past Event';
+        var formattedDate = formatEventDateForDisplay(dateStr);
+
+        var escapedTitle = title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        var pastEl = document.createElement('div');
+        pastEl.className = 'past-event animate-on-scroll';
+        pastEl.innerHTML = '<img class="past-event__image" src="' + placeholderImg + '" alt="' + escapedTitle + '">' +
+          '<div class="past-event__overlay">' +
+          '<h4 class="past-event__title">' + escapedTitle + '</h4>' +
+          '<span class="past-event__date">' + formattedDate + '</span>' +
+          '</div>';
+        pastEventsGrid.insertBefore(pastEl, pastEventsGrid.firstChild);
+        card.remove();
+      }
+    });
+  }
+
+  // Home page: hide past events from upcoming section
+  var homeUpcoming = document.getElementById('homeUpcomingEvents');
+  if (homeUpcoming) {
+    var homeCards = homeUpcoming.querySelectorAll('.event-card');
+    var todayHome = getTodayYYYYMMDD();
+    homeCards.forEach(function(card) {
+      var btn = card.querySelector('.add-to-cal');
+      var dateStr = btn ? btn.getAttribute('data-event-date') : null;
+      if (dateStr && dateStr.length === 8 && dateStr < todayHome) {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // ============================================
+  // 6. EVENT FILTERING
   // ============================================
   var filterButtons = document.querySelectorAll('#eventFilters .filter-btn');
   var eventCards = document.querySelectorAll('#eventsList .event-card');
@@ -224,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
-  // 6. CONTACT FORM VALIDATION
+  // 7. CONTACT FORM VALIDATION
   // ============================================
   var contactForm = document.getElementById('contactForm');
   var formSuccess = document.getElementById('formSuccess');
@@ -313,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
-  // 7. ADD TO CALENDAR (.ics Generation)
+  // 8. ADD TO CALENDAR (.ics Generation)
   // ============================================
   var calButtons = document.querySelectorAll('.add-to-cal');
   calButtons.forEach(function(btn) {
@@ -368,7 +433,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ============================================
-  // 8. FAQ ACCORDION
+  // 9. FAQ ACCORDION
   // ============================================
   var faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(function(item) {
@@ -394,7 +459,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ============================================
-  // 9. SCROLL ANIMATIONS (Intersection Observer)
+  // 10. SCROLL ANIMATIONS (Intersection Observer)
   // ============================================
   var animatedElements = document.querySelectorAll('.animate-on-scroll');
 
@@ -422,7 +487,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // ============================================
-  // 10. SMOOTH SCROLL FOR ANCHOR LINKS
+  // 11. SMOOTH SCROLL FOR ANCHOR LINKS
   // ============================================
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {

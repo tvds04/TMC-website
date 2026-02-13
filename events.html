@@ -19,7 +19,7 @@
         <img src="images/TMC_Logo.png" alt="TMC Logo">
         <div class="header__logo-text">
           TMC
-          <span>Kelley School of Business</span>
+          <span>Technology Management Club</span>
         </div>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
@@ -61,32 +61,29 @@
       <!-- Filter Bar -->
       <div class="filter-bar animate-on-scroll" id="eventFilters" role="tablist" aria-label="Filter events by type">
         <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Events</button>
-        <button class="filter-btn" data-filter="speaker" role="tab" aria-selected="false">Speaker Series</button>
-        <button class="filter-btn" data-filter="networking" role="tab" aria-selected="false">Networking</button>
-        <button class="filter-btn" data-filter="workshop" role="tab" aria-selected="false">Workshops</button>
-        <button class="filter-btn" data-filter="competition" role="tab" aria-selected="false">Competitions</button>
-        <button class="filter-btn" data-filter="social" role="tab" aria-selected="false">Social</button>
+        <button class="filter-btn" data-filter="professional-development" role="tab" aria-selected="false">Professional Development</button>
+        <button class="filter-btn" data-filter="technology-committee" role="tab" aria-selected="false">Technology Committee</button>
       </div>
 
       <!-- Events List -->
-      <!-- [UPDATE: Replace all placeholder events with actual upcoming events] -->
       <div id="eventsList" style="display: flex; flex-direction: column; gap: var(--space-4);">
 
-        <div class="event-card animate-on-scroll" data-type="speaker">
+        <!-- Professional Development: Tech Careers – Feb 11 -->
+        <div class="event-card animate-on-scroll" data-type="professional-development">
           <div class="event-card__date">
             <div class="event-card__date-month">FEB</div>
-            <div class="event-card__date-day">25</div>
+            <div class="event-card__date-day">11</div>
           </div>
           <div class="event-card__content">
-            <span class="card__tag card__tag--speaker">Speaker Series</span>
-            <h4 class="event-card__title">Tech Leadership in the Age of AI</h4>
+            <span class="card__tag card__tag--professional-development">Professional Development</span>
+            <h4 class="event-card__title">Tech Careers</h4>
             <div class="event-card__details">
-              <span>6:00 PM</span> &middot; <span>Hodge Hall 1000</span>
+              <span>8:00 PM</span> &middot; <span>SPEA 272</span>
             </div>
-            <p class="event-card__description">Sarah Chen, Senior Director of Product at Microsoft shares insights on leading technology teams.</p>
+            <p class="event-card__description">Explore career paths in technology at leading firms. Learn about roles, company culture, and how to position yourself for success.</p>
           </div>
           <div class="event-card__actions">
-            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Tech Leadership in the Age of AI" data-event-date="20260225" data-event-time="1800" data-event-location="Hodge Hall 1000" aria-label="Add speaker event to calendar">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Tech Careers" data-event-date="20260211" data-event-time="2000" data-event-location="SPEA 272" aria-label="Add Tech Careers to calendar">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
               </svg>
@@ -95,44 +92,22 @@
           </div>
         </div>
 
-        <div class="event-card animate-on-scroll" data-type="networking">
+        <!-- Technology Committee: AI in Business – Feb 18 -->
+        <div class="event-card animate-on-scroll" data-type="technology-committee">
           <div class="event-card__date">
-            <div class="event-card__date-month">MAR</div>
-            <div class="event-card__date-day">06</div>
-          </div>
-          <div class="event-card__content">
-            <span class="card__tag card__tag--networking">Networking</span>
-            <h4 class="event-card__title">Spring Tech Industry Mixer</h4>
-            <div class="event-card__details">
-              <span>5:30 PM</span> &middot; <span>Kelley Atrium</span>
-            </div>
-            <p class="event-card__description">Connect with professionals from Salesforce, Deloitte, and Accenture over appetizers and conversation.</p>
-          </div>
-          <div class="event-card__actions">
-            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Spring Tech Industry Mixer" data-event-date="20260306" data-event-time="1730" data-event-location="Kelley Atrium">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
-              </svg>
-              Add to Cal
-            </button>
-          </div>
-        </div>
-
-        <div class="event-card animate-on-scroll" data-type="workshop">
-          <div class="event-card__date">
-            <div class="event-card__date-month">MAR</div>
+            <div class="event-card__date-month">FEB</div>
             <div class="event-card__date-day">18</div>
           </div>
           <div class="event-card__content">
-            <span class="card__tag card__tag--workshop">Workshop</span>
-            <h4 class="event-card__title">Introduction to Product Management</h4>
+            <span class="card__tag card__tag--technology-committee">Technology Committee</span>
+            <h4 class="event-card__title">AI in Business</h4>
             <div class="event-card__details">
-              <span>7:00 PM</span> &middot; <span>Hodge Hall 2036</span>
+              <span>8:00 PM</span> &middot; <span>SPEA 272</span>
             </div>
-            <p class="event-card__description">Hands-on workshop covering product roadmaps, user stories, and prioritization frameworks with industry mentors.</p>
+            <p class="event-card__description">Discover how artificial intelligence is transforming business operations, strategy, and decision-making across industries.</p>
           </div>
           <div class="event-card__actions">
-            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Introduction to Product Management" data-event-date="20260318" data-event-time="1900" data-event-location="Hodge Hall 2036">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="AI in Business" data-event-date="20260218" data-event-time="2000" data-event-location="SPEA 272" aria-label="Add AI in Business to calendar">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
               </svg>
@@ -141,21 +116,22 @@
           </div>
         </div>
 
-        <div class="event-card animate-on-scroll" data-type="competition">
+        <!-- Professional Development: Tech Interviews – Mar 4 -->
+        <div class="event-card animate-on-scroll" data-type="professional-development">
           <div class="event-card__date">
-            <div class="event-card__date-month">APR</div>
-            <div class="event-card__date-day">02</div>
+            <div class="event-card__date-month">MAR</div>
+            <div class="event-card__date-day">04</div>
           </div>
           <div class="event-card__content">
-            <span class="card__tag card__tag--competition">Case Competition</span>
-            <h4 class="event-card__title">Spring Tech Case Competition</h4>
+            <span class="card__tag card__tag--professional-development">Professional Development</span>
+            <h4 class="event-card__title">Tech Interviews Event</h4>
             <div class="event-card__details">
-              <span>5:00 PM</span> &middot; <span>Hodge Hall 1000</span>
+              <span>8:00 PM</span> &middot; <span>SPEA 272</span>
             </div>
-            <p class="event-card__description">Teams of 4 tackle a real-world technology strategy case. Top prizes include resume books and recruiter introductions.</p>
+            <p class="event-card__description">Prepare for technical and behavioral interviews with tips, mock practice, and insights from recruiters and recent hires.</p>
           </div>
           <div class="event-card__actions">
-            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Spring Tech Case Competition" data-event-date="20260402" data-event-time="1700" data-event-location="Hodge Hall 1000">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Tech Interviews Event" data-event-date="20260304" data-event-time="2000" data-event-location="SPEA 272" aria-label="Add Tech Interviews Event to calendar">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
               </svg>
@@ -164,21 +140,94 @@
           </div>
         </div>
 
-        <div class="event-card animate-on-scroll" data-type="social">
+        <!-- Technology Committee: Data Analytics – Apr 1 -->
+        <div class="event-card animate-on-scroll" data-type="technology-committee">
+          <div class="event-card__date">
+            <div class="event-card__date-month">APR</div>
+            <div class="event-card__date-day">01</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--technology-committee">Technology Committee</span>
+            <h4 class="event-card__title">Data Analytics</h4>
+            <div class="event-card__details">
+              <span>8:00 PM</span> &middot; <span>SPEA 272</span>
+            </div>
+            <p class="event-card__description">Learn data analysis techniques, visualization tools, and how data-driven insights power business decisions.</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Data Analytics" data-event-date="20260401" data-event-time="2000" data-event-location="SPEA 272" aria-label="Add Data Analytics to calendar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+
+        <!-- Technology Committee: Product Management – Apr 15 -->
+        <div class="event-card animate-on-scroll" data-type="technology-committee">
+          <div class="event-card__date">
+            <div class="event-card__date-month">APR</div>
+            <div class="event-card__date-day">15</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--technology-committee">Technology Committee</span>
+            <h4 class="event-card__title">Product Management</h4>
+            <div class="event-card__details">
+              <span>8:00 PM</span> &middot; <span>SPEA 272</span>
+            </div>
+            <p class="event-card__description">Explore the role of product managers in tech companies—roadmaps, user research, and bringing products to market.</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Product Management" data-event-date="20260415" data-event-time="2000" data-event-location="SPEA 272" aria-label="Add Product Management to calendar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+
+        <!-- Professional Development: Big 3 & Big 4 Internship Panel – Apr 22 (tentative) -->
+        <div class="event-card animate-on-scroll" data-type="professional-development">
           <div class="event-card__date">
             <div class="event-card__date-month">APR</div>
             <div class="event-card__date-day">22</div>
           </div>
           <div class="event-card__content">
-            <span class="card__tag card__tag--social">Social Event</span>
-            <h4 class="event-card__title">End-of-Year TMC Celebration</h4>
+            <span class="card__tag card__tag--professional-development">Professional Development</span>
+            <h4 class="event-card__title">Big 3 & Big 4 Internship Panel <em>(Tentative Date)</em></h4>
             <div class="event-card__details">
-              <span>6:30 PM</span> &middot; <span>Kelley Courtyard</span>
+              <span>8:00 PM</span> &middot; <span>SPEA 272</span>
             </div>
-            <p class="event-card__description">Celebrate the semester with food, games, awards, and community. Open to all members and friends.</p>
+            <p class="event-card__description">Hear from students who secured internships at McKinsey, BCG, Bain, Deloitte, EY, KPMG, and PwC. Get advice on applications, interviews, and making the most of your internship.</p>
           </div>
           <div class="event-card__actions">
-            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="End-of-Year TMC Celebration" data-event-date="20260422" data-event-time="1830" data-event-location="Kelley Courtyard">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Big 3 & Big 4 Internship Panel" data-event-date="20260422" data-event-time="2000" data-event-location="SPEA 272" aria-label="Add Big 3 & Big 4 Internship Panel to calendar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+
+        <!-- Professional Development: Skills & Projects – Apr 29 -->
+        <div class="event-card animate-on-scroll" data-type="professional-development">
+          <div class="event-card__date">
+            <div class="event-card__date-month">APR</div>
+            <div class="event-card__date-day">29</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--professional-development">Professional Development</span>
+            <h4 class="event-card__title">Skills & Projects Event</h4>
+            <div class="event-card__details">
+              <span>8:00 PM</span> &middot; <span>SPEA 272</span>
+            </div>
+            <p class="event-card__description">Build your resume with hands-on skills and project experience. Learn how to showcase technical and business projects to employers.</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Skills & Projects Event" data-event-date="20260429" data-event-time="2000" data-event-location="SPEA 272" aria-label="Add Skills & Projects Event to calendar">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
               </svg>
@@ -206,70 +255,75 @@
 
       <!-- Past Event Gallery -->
       <!-- [UPDATE: Replace placeholder images with actual event photos] -->
-      <div class="grid grid--3" style="margin-top: var(--space-7);">
+      <div id="pastEventsGrid" class="grid grid--3" style="margin-top: var(--space-7);">
+
         <div class="past-event animate-on-scroll stagger-1">
-          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Fall Industry Speaker Panel">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="TMC Case Competition Fall 2025">
           <div class="past-event__overlay">
-            <h4 class="past-event__title">Fall Industry Speaker Panel</h4>
+            <h4 class="past-event__title">TMC Case Competition</h4>
             <span class="past-event__date">Fall 2025</span>
           </div>
         </div>
 
         <div class="past-event animate-on-scroll stagger-2">
-          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Hackathon: Innovate Kelley">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="AI Agents Workshop Fall 2025">
           <div class="past-event__overlay">
-            <h4 class="past-event__title">Hackathon: Innovate Kelley</h4>
+            <h4 class="past-event__title">AI Agents Workshop</h4>
             <span class="past-event__date">Fall 2025</span>
           </div>
         </div>
 
         <div class="past-event animate-on-scroll stagger-3">
-          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Career Prep Workshop Series">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Fall 2025 Welcome Kickoff">
           <div class="past-event__overlay">
-            <h4 class="past-event__title">Career Prep Workshop Series</h4>
+            <h4 class="past-event__title">Fall Kickoff Event</h4>
             <span class="past-event__date">Fall 2025</span>
           </div>
         </div>
 
         <div class="past-event animate-on-scroll stagger-1">
-          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Alumni Networking Night">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Spring 2025 Case Competition with Luddy Consulting Association">
           <div class="past-event__overlay">
-            <h4 class="past-event__title">Alumni Networking Night</h4>
+            <h4 class="past-event__title">Case Competition with Luddy</h4>
             <span class="past-event__date">Spring 2025</span>
           </div>
         </div>
 
         <div class="past-event animate-on-scroll stagger-2">
-          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Data Analytics Bootcamp">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Cloud Computing Event at Hodge Hall">
           <div class="past-event__overlay">
-            <h4 class="past-event__title">Data Analytics Bootcamp</h4>
-            <span class="past-event__date">Spring 2025</span>
+            <h4 class="past-event__title">Cloud Computing Event</h4>
+            <span class="past-event__date">Fall 2024</span>
           </div>
         </div>
 
         <div class="past-event animate-on-scroll stagger-3">
-          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Annual Tech Showcase">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Cybersecurity Event with EY and PWC">
           <div class="past-event__overlay">
-            <h4 class="past-event__title">Annual Tech Showcase</h4>
-            <span class="past-event__date">Spring 2025</span>
+            <h4 class="past-event__title">Cybersecurity Event</h4>
+            <span class="past-event__date">Fall 2024</span>
           </div>
         </div>
+
       </div>
 
       <!-- Image Gallery Carousel for featured past event -->
       <div style="margin-top: var(--space-9);">
-        <h3 style="margin-bottom: var(--space-5);" class="animate-on-scroll">Featured Event Gallery</h3>
-        <!-- [UPDATE: Replace with actual event photos for the gallery carousel] -->
+        <div class="animate-on-scroll" style="margin-bottom: var(--space-5);">
+          <h3>Featured: Spring 2025 Case Competition</h3>
+          <p style="color: var(--color-gray-600); margin-top: var(--space-2);">Co-hosted with the Luddy Consulting Association, students tackled a real-world tech start-up challenge covering market expansion, regulatory strategy, and profitability. Judges included professionals from industry and academia.</p>
+        </div>
+        <!-- [UPDATE: Replace placeholder slides with actual event photos] -->
         <div class="gallery animate-on-scroll" id="pastEventGallery">
           <div class="gallery__track" id="galleryTrack">
             <div class="gallery__slide">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23e8f4fa' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3EFeatured Event Photo 1%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Featured event photo 1">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23e8f4fa' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3ESpring 2025 Case Competition%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Spring 2025 Case Competition - team presentations">
             </div>
             <div class="gallery__slide">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23f1f3f5' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3EFeatured Event Photo 2%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Featured event photo 2">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23f1f3f5' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3ESpring 2025 Case Competition%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Spring 2025 Case Competition - judges panel">
             </div>
             <div class="gallery__slide">
-              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23e8f4fa' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3EFeatured Event Photo 3%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Featured event photo 3">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23e8f4fa' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3ESpring 2025 Case Competition%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Spring 2025 Case Competition - award ceremony">
             </div>
           </div>
           <button class="gallery__nav gallery__nav--prev" aria-label="Previous photo">
@@ -294,7 +348,7 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="footer__logo">
-            <img src="images/TMC_Logo.png" alt="TMC Logo">
+            <img src="images/TMC_Logo.png" alt="Technology Management Club logo">
             <span class="footer__logo-text">Technology Management Club</span>
           </div>
           <p class="footer__description">Kelley School of Business's leading organization for students passionate about technology and its role in shaping modern business.</p>

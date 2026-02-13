@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(python parse_instagram.py:*)",
+      "Bash(Remove-Item \"C:\\\\Users\\\\tomvo\\\\Documents\\\\OneDrive\\\\Desktop\\\\Python\\\\Projects\\\\TMC Website\\\\parse_instagram.py\")",
+      "Bash(Remove-Item \"C:\\\\Users\\\\tomvo\\\\Documents\\\\OneDrive\\\\Desktop\\\\Python\\\\Projects\\\\TMC Website\\\\AI_CONTEXT\\\\parsed_events.txt\")",
+      "Bash(powershell -Command:*)"
     ]
   }
 }

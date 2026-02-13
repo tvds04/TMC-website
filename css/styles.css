@@ -508,10 +508,36 @@ p {
   pointer-events: none;
 }
 
-.hero__content {
+.hero__layout {
   position: relative;
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-10);
+  width: 100%;
+}
+
+.hero__content {
   max-width: 700px;
+  flex-shrink: 0;
+}
+
+.hero__logo-wrap {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__logo {
+  width: 420px;
+  height: auto;
+  max-width: min(420px, 40vw);
+  object-fit: contain;
+  filter: drop-shadow(0 0 36px rgba(255, 255, 255, 1))
+          drop-shadow(0 0 72px rgba(255, 255, 255, 1))
+          drop-shadow(0 0 120px rgba(255, 255, 255, 0.5));
 }
 
 .hero__label {
@@ -647,6 +673,16 @@ p {
 }
 
 .card__tag--speaker {
+  background: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.card__tag--professional-development {
+  background: #e3f2fd;
+  color: #01679b;
+}
+
+.card__tag--technology-committee {
   background: #f3e5f5;
   color: #6a1b9a;
 }
@@ -1224,8 +1260,9 @@ p {
 
 .footer__logo img {
   height: 40px;
-  width: auto;
-  filter: brightness(0) invert(1);
+  width: 40px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .footer__logo-text {
@@ -1344,6 +1381,11 @@ p {
 .hero__content > *:nth-child(2) { animation-delay: 0.35s; }
 .hero__content > *:nth-child(3) { animation-delay: 0.5s; }
 .hero__content > *:nth-child(4) { animation-delay: 0.65s; }
+
+.hero__logo-wrap {
+  opacity: 0;
+  animation: fadeInUp 0.8s var(--ease-out) 0.4s forwards;
+}
 
 .hero__stats {
   opacity: 0;
@@ -1571,6 +1613,15 @@ p {
     min-height: auto;
     padding-top: calc(var(--header-height) + var(--space-8));
     padding-bottom: var(--space-8);
+  }
+
+  .hero__layout {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .hero__logo {
+    width: min(280px, 70vw);
   }
 
   .hero__stats {

@@ -4,9 +4,13 @@
 TODO:
 Add Images from Google Drive
 Add description of the club
+Add future events/calendar
+Add all of exec
+Make sure the join link is active
+
 Add stuff from the Instagram to inform the past events
 Modernize and make it feel more alive/special using react or other libraries.
-Add live Instagram feed
+
 
 
 
