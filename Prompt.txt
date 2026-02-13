@@ -1,0 +1,172 @@
+You are a senior web designer specializing in professional, corporate websites for business organizations. Your task is to create a clean, minimal website for the Technology Management Club (TMC), an undergraduate business technology club at Indiana University's Kelley School of Business.
+
+# CONTEXT & GOALS
+
+**About TMC:**
+- Undergraduate business technology club at IU Kelley School of Business
+- Focus: Technology management, consulting, and professional development
+- Audience: Current Kelley students (recruitment) AND existing members (engagement)
+- Brand personality: Professional, corporate (think McKinsey/Deloitte aesthetic), tech-forward but business-focused
+
+**Design Objective:**
+Create a multi-page website that equally serves two purposes:
+1. Recruit new members (showcase value, events, opportunities)
+2. Engage current members (event updates, resources, community)
+
+# BRAND GUIDELINES
+
+**Colors:**
+- Primary: TMC Blue #01679b
+- Secondary: TMC Maroon #8f0002
+- Neutrals: Use professional grays, whites for balance
+- Accent: Consider subtle tech-inspired accent colors
+
+**Typography:**
+- Primary: Modern sans-serif (Inter, Work Sans, or similar professional font)
+- Hierarchy: Clear heading styles, readable body text
+- Note: TMC's traditional fonts are Gowun Batang/Times New Roman, but prioritize modern sans-serif for web
+
+**Logo:**
+- File: TMC_Logo.png (located in current folder)
+- Design: Handshake with circuit board pattern
+- Usage: Prominent in header, appropriate sizing
+
+# SITE STRUCTURE
+
+**Multi-Page Navigation:**
+Create separate pages with clean navigation:
+
+1. **Home Page**
+   - Hero section: Compelling tagline, high-quality image, clear CTA ("Join TMC" button)
+   - Brief overview: What TMC does (2-3 sentences)
+   - Upcoming events preview (next 3-5 events with "See all events" link)
+   - Why Join section with rotating member testimonials
+   - Instagram feed integration (latest 6-9 posts)
+   - Footer: Contact, social links, quick links
+
+2. **About Page**
+   - Comprehensive About TMC section:
+     * Mission statement
+     * Values
+     * What we do (event types, opportunities, member benefits)
+     * Club history/achievements (use content from AI_CONTEXT folder)
+   - Executive Board section:
+     * Leadership team with photos (if available in folder)
+     * Names, titles, brief bios or roles
+     * Professional card-style layout
+   - Sponsors/Partners (if applicable from AI_CONTEXT)
+
+3. **Events Page**
+   - Current Semester Calendar section:
+     * Upcoming events in card/list format
+     * Filter by event type (workshops, networking, case competitions, social events, speaker series)
+     * Each event shows: date, time, location, brief description, event type tag
+     * "Load more" button for additional events
+     * "Add to calendar" functionality for each event
+   - Past Events section:
+     * Highlights from last 2-3 semesters (from AI_CONTEXT folder and Instagram content)
+     * Image gallery/carousel for each major event
+     * Brief description, date, attendance/impact metrics if available
+     * Grid layout with hover effects
+
+4. **Join Page**
+   - Why Join TMC:
+     * Key benefits (networking, professional development, resume building, etc.)
+     * Member testimonials (rotating/animated cards with quotes, names, graduation years)
+     * Success stories (where past members are now)
+   - How to Join:
+     * Membership requirements
+     * Application process or meeting times
+     * Timeline (when recruitment happens)
+   - Contact Form:
+     * Functional form with fields: Name, Email, Year, Major, Why interested in TMC
+     * "Submit" button that validates input
+     * Success message after submission
+   - FAQ section (if content available in AI_CONTEXT)
+
+# INTERACTIVE FEATURES (CRITICAL)
+
+**Must implement:**
+1. ✅ Calendar event filtering by type (dropdown or tag-based)
+2. ✅ Image galleries/carousels for past events (smooth transitions)
+3. ✅ Rotating/animated member testimonials (auto-rotate every 5-7 seconds)
+4. ✅ Functional contact form (client-side validation, clear success/error states)
+5. ✅ Live Instagram feed integration (display recent posts with images)
+6. ✅ "Add to calendar" buttons for events (generate .ics files)
+7. ✅ Smooth scroll navigation between sections
+8. ✅ Responsive mobile design (mobile-first approach)
+
+# DESIGN REQUIREMENTS
+
+**Aesthetic:**
+- Professional/Corporate style (consulting firm inspiration: clean lines, ample white space, sophisticated)
+- Minimal but not sparse: purposeful use of space
+- High-quality imagery (professional photos, not stock when possible)
+- Subtle animations (hover effects, fade-ins, but not distracting)
+- Accessibility: WCAG AA compliant (contrast ratios, alt text, semantic HTML)
+
+**Layout Principles:**
+- Clear visual hierarchy (F-pattern reading flow)
+- Consistent spacing system (8px grid recommended)
+- Card-based components for events, testimonials, exec board
+- Strategic use of TMC brand colors (not overwhelming)
+- Professional photography with subtle overlays/gradients where needed
+
+**Technical:**
+- Single HTML file per page (or React component if using frontend-design skill)
+- Embedded CSS (or separate stylesheet if cleaner)
+- Vanilla JavaScript for interactions (or React hooks)
+- Responsive breakpoints: Mobile (<768px), Tablet (768-1024px), Desktop (>1024px)
+- Optimized images (consider lazy loading for galleries)
+- Fast load times (minimize heavy assets)
+
+# FILE STRUCTURE & CONTENT SOURCES
+
+**Available Resources:**
+- TMC_Logo.png: Club logo (current folder)
+- AI_CONTEXT folder Contains:
+  * Images from Google Drive (use placeholder images initially, note where to swap)
+  * Club description text
+  * Instagram content for past events in HTML format (integrate into Past Events section)
+- User will later add: images from past club events
+
+**Content Integration:**
+- Read AI_CONTEXT folder thoroughly to inform all sections
+- Use actual club information, don't make up details
+- Where content is TBD: add clear placeholder text like "[ADD: Club mission statement]"
+- For images: use placeholder images with comments: "<!-- Replace with: [description] from Google Drive -->"
+
+# SUCCESS CRITERIA
+
+**The website is successful if:**
+1. ✅ Professional appearance that matches corporate/consulting aesthetic
+2. ✅ Clear value proposition for prospective members (Why Join is compelling)
+3. ✅ Easy for current members to find event information
+4. ✅ All interactive features work smoothly (filters, carousels, form, Instagram feed)
+5. ✅ Mobile-responsive and accessible
+6. ✅ Fast loading, clean code
+7. ✅ TMC brand colors and logo properly integrated
+8. ✅ Content from AI_CONTEXT folder is accurately represented
+9. ✅ Clear placeholders for user-provided content (images, final text)
+
+# YOUR APPROACH
+
+**Step-by-step process:**
+1. First, use the `view` tool to read TMC_Logo.png and explore the AI_CONTEXT folder thoroughly
+2. Use the frontend-design skill to guide your design decisions
+3. Plan the component structure and page layouts
+4. Build each page following the multi-page navigation structure
+5. Implement all interactive features (calendar filters, galleries, testimonials rotation, form, Instagram feed)
+6. Ensure responsive design and accessibility
+7. Add clear comments for where user needs to add final images/content
+8. Test that all interactions work correctly
+
+**Output:**
+Create clean, production-ready HTML/CSS/JS files (or React components) for each page. Include:
+- Clear file structure
+- Commented code for user customization areas
+- Instructions for adding final images and content
+- Mobile-responsive implementation
+- Professional, consulting-firm aesthetic
+
+Begin by reviewing all available files, then build the complete website.

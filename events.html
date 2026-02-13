@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TMC Events - Upcoming workshops, speaker events, networking sessions, and past event highlights at Kelley School of Business.">
+  <title>Events | TMC - Technology Management Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="images/TMC_Logo.png" type="image/png">
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="TMC Home">
+        <img src="images/TMC_Logo.png" alt="TMC Logo">
+        <div class="header__logo-text">
+          TMC
+          <span>Kelley School of Business</span>
+        </div>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" id="navMenu" role="navigation" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="events.html" class="nav__link active">Events</a></li>
+          <li><a href="join.html" class="nav__link nav__cta btn btn--primary btn--sm">Join TMC</a></li>
+        </ul>
+      </nav>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </div>
+  </header>
+
+  <!-- ============ PAGE BANNER ============ -->
+  <section class="page-banner">
+    <div class="container">
+      <div class="page-banner__content">
+        <div class="page-banner__label">Events</div>
+        <h1 class="page-banner__title">Events & Experiences</h1>
+        <p class="page-banner__subtitle">
+          From industry speakers to hands-on workshops, discover what's happening at TMC this semester and beyond.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UPCOMING EVENTS ============ -->
+  <section class="section" id="main-content">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-label">This Semester</span>
+        <h2 class="section-title">Upcoming Events</h2>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar animate-on-scroll" id="eventFilters" role="tablist" aria-label="Filter events by type">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All Events</button>
+        <button class="filter-btn" data-filter="speaker" role="tab" aria-selected="false">Speaker Series</button>
+        <button class="filter-btn" data-filter="networking" role="tab" aria-selected="false">Networking</button>
+        <button class="filter-btn" data-filter="workshop" role="tab" aria-selected="false">Workshops</button>
+        <button class="filter-btn" data-filter="competition" role="tab" aria-selected="false">Competitions</button>
+        <button class="filter-btn" data-filter="social" role="tab" aria-selected="false">Social</button>
+      </div>
+
+      <!-- Events List -->
+      <!-- [UPDATE: Replace all placeholder events with actual upcoming events] -->
+      <div id="eventsList" style="display: flex; flex-direction: column; gap: var(--space-4);">
+
+        <div class="event-card animate-on-scroll" data-type="speaker">
+          <div class="event-card__date">
+            <div class="event-card__date-month">TBD</div>
+            <div class="event-card__date-day">--</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--speaker">Speaker Series</span>
+            <h4 class="event-card__title">[ADD: Speaker Event Title]</h4>
+            <div class="event-card__details">
+              <span>Time TBD</span> &middot; <span>Location TBD</span>
+            </div>
+            <p class="event-card__description">[ADD: Description of the speaker event, who is speaking, topic, etc.]</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Speaker Event" data-event-date="" data-event-time="" data-event-location="" aria-label="Add speaker event to calendar">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card animate-on-scroll" data-type="networking">
+          <div class="event-card__date">
+            <div class="event-card__date-month">TBD</div>
+            <div class="event-card__date-day">--</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--networking">Networking</span>
+            <h4 class="event-card__title">[ADD: Networking Event Title]</h4>
+            <div class="event-card__details">
+              <span>Time TBD</span> &middot; <span>Location TBD</span>
+            </div>
+            <p class="event-card__description">[ADD: Description of networking opportunity, who will be present, etc.]</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Networking Event" data-event-date="" data-event-time="" data-event-location="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card animate-on-scroll" data-type="workshop">
+          <div class="event-card__date">
+            <div class="event-card__date-month">TBD</div>
+            <div class="event-card__date-day">--</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--workshop">Workshop</span>
+            <h4 class="event-card__title">[ADD: Workshop Title]</h4>
+            <div class="event-card__details">
+              <span>Time TBD</span> &middot; <span>Location TBD</span>
+            </div>
+            <p class="event-card__description">[ADD: What the workshop covers, skills learned, etc.]</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Workshop" data-event-date="" data-event-time="" data-event-location="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card animate-on-scroll" data-type="competition">
+          <div class="event-card__date">
+            <div class="event-card__date-month">TBD</div>
+            <div class="event-card__date-day">--</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--competition">Case Competition</span>
+            <h4 class="event-card__title">[ADD: Case Competition Title]</h4>
+            <div class="event-card__details">
+              <span>Time TBD</span> &middot; <span>Location TBD</span>
+            </div>
+            <p class="event-card__description">[ADD: Competition details, theme, teams, prizes, etc.]</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Case Competition" data-event-date="" data-event-time="" data-event-location="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+
+        <div class="event-card animate-on-scroll" data-type="social">
+          <div class="event-card__date">
+            <div class="event-card__date-month">TBD</div>
+            <div class="event-card__date-day">--</div>
+          </div>
+          <div class="event-card__content">
+            <span class="card__tag card__tag--social">Social Event</span>
+            <h4 class="event-card__title">[ADD: Social Event Title]</h4>
+            <div class="event-card__details">
+              <span>Time TBD</span> &middot; <span>Location TBD</span>
+            </div>
+            <p class="event-card__description">[ADD: Social event details, what to expect, etc.]</p>
+          </div>
+          <div class="event-card__actions">
+            <button class="btn btn--secondary btn--sm add-to-cal" data-event-title="Social Event" data-event-date="" data-event-time="" data-event-location="">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:16px;height:16px;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+              </svg>
+              Add to Cal
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- No results message (hidden by default) -->
+      <div id="noEvents" style="display: none; text-align: center; padding: var(--space-8) 0; color: var(--color-gray-500);">
+        <p>No upcoming events in this category. Check back soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PAST EVENTS ============ -->
+  <section class="section section--alt" id="past-events">
+    <div class="container">
+      <div class="animate-on-scroll">
+        <span class="section-label">Looking Back</span>
+        <h2 class="section-title">Past Event Highlights</h2>
+        <p class="section-subtitle">Highlights from recent semesters showcasing the TMC experience.</p>
+      </div>
+
+      <!-- Past Event Gallery -->
+      <!-- [UPDATE: Replace placeholder images with actual event photos] -->
+      <div class="grid grid--3" style="margin-top: var(--space-7);">
+        <div class="past-event animate-on-scroll stagger-1">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Past event photo">
+          <div class="past-event__overlay">
+            <h4 class="past-event__title">[ADD: Past Event Name]</h4>
+            <span class="past-event__date">[ADD: Semester/Date]</span>
+          </div>
+        </div>
+
+        <div class="past-event animate-on-scroll stagger-2">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Past event photo">
+          <div class="past-event__overlay">
+            <h4 class="past-event__title">[ADD: Past Event Name]</h4>
+            <span class="past-event__date">[ADD: Semester/Date]</span>
+          </div>
+        </div>
+
+        <div class="past-event animate-on-scroll stagger-3">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Past event photo">
+          <div class="past-event__overlay">
+            <h4 class="past-event__title">[ADD: Past Event Name]</h4>
+            <span class="past-event__date">[ADD: Semester/Date]</span>
+          </div>
+        </div>
+
+        <div class="past-event animate-on-scroll stagger-1">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Past event photo">
+          <div class="past-event__overlay">
+            <h4 class="past-event__title">[ADD: Past Event Name]</h4>
+            <span class="past-event__date">[ADD: Semester/Date]</span>
+          </div>
+        </div>
+
+        <div class="past-event animate-on-scroll stagger-2">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Past event photo">
+          <div class="past-event__overlay">
+            <h4 class="past-event__title">[ADD: Past Event Name]</h4>
+            <span class="past-event__date">[ADD: Semester/Date]</span>
+          </div>
+        </div>
+
+        <div class="past-event animate-on-scroll stagger-3">
+          <img class="past-event__image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23e9ecef' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E" alt="Past event photo">
+          <div class="past-event__overlay">
+            <h4 class="past-event__title">[ADD: Past Event Name]</h4>
+            <span class="past-event__date">[ADD: Semester/Date]</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Gallery Carousel for featured past event -->
+      <div style="margin-top: var(--space-9);">
+        <h3 style="margin-bottom: var(--space-5);" class="animate-on-scroll">Featured Event Gallery</h3>
+        <!-- [UPDATE: Replace with actual event photos for the gallery carousel] -->
+        <div class="gallery animate-on-scroll" id="pastEventGallery">
+          <div class="gallery__track" id="galleryTrack">
+            <div class="gallery__slide">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23e8f4fa' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3EFeatured Event Photo 1%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Featured event photo 1">
+            </div>
+            <div class="gallery__slide">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23f1f3f5' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3EFeatured Event Photo 2%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Featured event photo 2">
+            </div>
+            <div class="gallery__slide">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='675'%3E%3Crect fill='%23e8f4fa' width='1200' height='675'/%3E%3Ctext fill='%2301679b' font-family='sans-serif' font-size='20' x='50%25' y='45%25' text-anchor='middle'%3EFeatured Event Photo 3%3C/text%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='55%25' text-anchor='middle'%3E[Replace with event photo]%3C/text%3E%3C/svg%3E" alt="Featured event photo 3">
+            </div>
+          </div>
+          <button class="gallery__nav gallery__nav--prev" aria-label="Previous photo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:20px;height:20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <button class="gallery__nav gallery__nav--next" aria-label="Next photo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:20px;height:20px;">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+          <div class="gallery__dots" id="galleryDots"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="images/TMC_Logo.png" alt="TMC Logo">
+            <span class="footer__logo-text">Technology Management Club</span>
+          </div>
+          <p class="footer__description">Kelley School of Business's leading organization for students passionate about technology and its role in shaping modern business.</p>
+          <div class="footer__social">
+            <a href="https://instagram.com/tmc.iu" target="_blank" rel="noopener noreferrer" aria-label="Follow TMC on Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            </a>
+            <a href="mailto:tmcindianauniversity@gmail.com" aria-label="Email TMC">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__heading">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="join.html">Join TMC</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Resources</h4>
+          <ul class="footer__links">
+            <li><a href="events.html#past-events">Past Events</a></li>
+            <li><a href="about.html#exec-board">Exec Board</a></li>
+            <li><a href="join.html#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__heading">Contact</h4>
+          <ul class="footer__links">
+            <li><a href="mailto:tmcindianauniversity@gmail.com">tmcindianauniversity@gmail.com</a></li>
+            <li><a href="https://instagram.com/tmc.iu" target="_blank" rel="noopener noreferrer">@tmc.iu</a></li>
+            <li>Kelley School of Business</li>
+            <li>Indiana University</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Technology Management Club. All rights reserved.</p>
+        <p>Kelley School of Business | Indiana University Bloomington</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
