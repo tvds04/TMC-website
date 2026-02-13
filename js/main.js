@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create a temporary tooltip
         var tooltip = document.createElement('span');
         tooltip.textContent = 'Date TBD - check back soon!';
-        tooltip.style.cssText = 'position: absolute; background: var(--color-gray-900, #212529); color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; z-index: 100; transform: translateY(-120%); left: 50%; margin-left: -80px;';
+        tooltip.style.cssText = 'position: absolute; background: #212529; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; white-space: nowrap; z-index: 100; bottom: 100%; left: 50%; transform: translateX(-50%); margin-bottom: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);';
         btn.style.position = 'relative';
         btn.appendChild(tooltip);
         setTimeout(function() {

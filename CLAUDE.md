@@ -17,7 +17,7 @@ TMC Website is a multi-page static website for the Technology Management Club at
 
 ### Pages
 - `index.html` - Home page with hero, overview, upcoming events, testimonials, Instagram feed
-- `about.html` - Mission/values, activities, executive board, sponsors
+- `about.html` - Mission/values, activities, executive board
 - `events.html` - Upcoming events with filtering, past events gallery with carousel
 - `join.html` - Why join section, recruitment process, contact form with validation, FAQ accordion
 
@@ -70,8 +70,6 @@ All content has `[ADD: ...]` or `[UPDATE: ...]` placeholder comments indicating 
 - Member testimonials (quotes, names, majors, years)
 - Executive board (names, titles, photos)
 - Past event photos and captions
-- Instagram post images
-- Sponsor logos
 
 ### Adding Events
 In `events.html`, duplicate an event-card block:
@@ -114,7 +112,7 @@ Search for `<!-- Replace with:` comments or SVG data URIs that serve as placehol
 - Hero/banner images
 - Executive board photos (aspect ratio: 120x120px circles)
 - Past event gallery images (aspect ratio: 4:3)
-- Instagram grid items (square aspect ratio)
+- Instagram feed: Live feed via Elfsight widget (index.html) – configure at elfsight.com
 
 Image optimization tips:
 - Use modern formats (WebP with fallback)
@@ -169,13 +167,12 @@ Mobile menu uses fixed positioning with overlay backdrop. Test on actual devices
 - Single CSS file (34KB) - loads once for all pages
 - Minimal JavaScript (16KB) - vanilla JS, no frameworks
 - Placeholder SVG images - replace with optimized actual images
-- No external CDN dependencies except Google Fonts
+- External dependencies: Google Fonts, Elfsight (Instagram feed widget on index.html)
 - Images should be served from `/images/` directory
 
 ## Future Enhancements
 
 - Backend form submission endpoint
-- Real Instagram feed integration (API)
 - Event management system
 - Member login/dashboard
 - Blog or news section
