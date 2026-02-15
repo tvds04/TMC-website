@@ -209,6 +209,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var cards = eventsList.querySelectorAll('.event-card');
     var today = getTodayYYYYMMDD();
     var placeholderImg = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23dee2e6' width='400' height='300'/%3E%3Ctext fill='%23868e96' font-family='sans-serif' font-size='14' x='50%25' y='50%25' text-anchor='middle'%3EEvent Photo%3C/text%3E%3C/svg%3E";
+    var existingPastTitles = new Set(
+      Array.prototype.map.call(
+        pastEventsGrid.querySelectorAll('.past-event__title'),
+        function(el) {
+          return el.textContent.trim().toLowerCase();
+        }
+      )
+    );
 
     cards.forEach(function(card) {
       var btn = card.querySelector('.add-to-cal');
@@ -218,7 +226,15 @@ document.addEventListener('DOMContentLoaded', function() {
       if (dateStr < today) {
         var titleEl = card.querySelector('.event-card__title');
         var title = titleEl ? titleEl.textContent.trim() : 'Past Event';
+        var normalizedTitle = title.toLowerCase();
         var formattedDate = formatEventDateForDisplay(dateStr);
+        var alreadyInPastGrid = existingPastTitles.has(normalizedTitle);
+
+        // If this event already exists in the curated past-events grid, do not duplicate it.
+        if (alreadyInPastGrid) {
+          card.remove();
+          return;
+        }
 
         var escapedTitle = title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
         var pastEl = document.createElement('div');
@@ -229,6 +245,7 @@ document.addEventListener('DOMContentLoaded', function() {
           '<span class="past-event__date">' + formattedDate + '</span>' +
           '</div>';
         pastEventsGrid.insertBefore(pastEl, pastEventsGrid.firstChild);
+        existingPastTitles.add(normalizedTitle);
         card.remove();
       }
     });
